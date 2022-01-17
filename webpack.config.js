@@ -1,5 +1,6 @@
 // add Node.js path module
 const path = require("path");
+const webpack = require("webpack");
 
 // create main configuration object
 module.exports = {
@@ -13,6 +14,13 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "main.bundle.js",
   },
+  // add plugin to make exception for jQuery's $
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
+  ],
   // setup the mode in which we want webpack to run
   // webpack runs in 'production mode' automatically, which will automatically minify our code and run uglify(?)
   // development mode will offer hot reloading of webpack and debugging features
