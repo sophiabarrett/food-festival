@@ -4,7 +4,7 @@
 PWA for food lovers to naviate a food festival even when they have poor internet connection.
 
 ## Screenshot
-!(screenshot)[./screenshot.png]
+![screenshot](./screenshot.png)
 
 ## Built With
 - Webpack
